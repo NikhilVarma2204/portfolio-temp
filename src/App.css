@@ -1,0 +1,363 @@
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.apology-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffd1dc, #ffb6c1);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.heart-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 60px;
+  transform-style: preserve-3d;
+  animation: float 6s ease-in-out infinite;
+}
+
+.heart {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff4d6d, #ff8fa3);
+  transform: rotate(45deg);
+  animation: heartbeat 1.5s ease-in-out infinite;
+  box-shadow: 0 0 60px rgba(255, 77, 109, 0.3);
+  transition: all 0.3s ease;
+}
+
+.heart:hover {
+  transform: rotate(45deg) scale(1.1);
+  box-shadow: 0 0 80px rgba(255, 77, 109, 0.5);
+}
+
+.heart:before,
+.heart:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+  box-shadow: inherit;
+}
+
+.heart:before {
+  left: -50%;
+}
+
+.heart:after {
+  top: -50%;
+}
+
+.title {
+  font-size: 4.5rem;
+  background: linear-gradient(45deg, #ff4d6d, #ff8fa3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 60px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  animation: titleFloat 3s ease-in-out infinite;
+  letter-spacing: 2px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.message-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 50px;
+  border-radius: 40px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+  backdrop-filter: blur(10px);
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 20px;
+}
+
+.message-box:hover {
+  transform: translateY(-5px) rotateX(5deg);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.message {
+  font-size: 1.8rem;
+  color: #666;
+  line-height: 2;
+  margin-bottom: 40px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.cute-button {
+  background: linear-gradient(45deg, #ff4d6d, #ff8fa3);
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 40px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  box-shadow: 0 8px 20px rgba(255, 77, 109, 0.3);
+  position: relative;
+  overflow: hidden;
+  width: auto;
+  min-width: 300px;
+}
+
+.cute-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255, 77, 109, 0.4);
+}
+
+.cute-button:active {
+  transform: translateY(1px);
+}
+
+.cute-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.cute-button:hover::after {
+  transform: translateX(100%);
+}
+
+.special-message {
+  margin-top: 40px;
+  padding: 30px;
+  background: rgba(255, 77, 109, 0.1);
+  border-radius: 30px;
+  animation: slideIn 0.5s ease-out;
+  border: 1px solid rgba(255, 77, 109, 0.2);
+}
+
+.special-message p {
+  margin: 20px 0;
+  color: #ff4d6d;
+  font-size: 1.6rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.special-message p:nth-child(1) { animation-delay: 0.1s; }
+.special-message p:nth-child(2) { animation-delay: 0.2s; }
+.special-message p:nth-child(3) { animation-delay: 0.3s; }
+
+.floating-hearts {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-heart {
+  position: absolute;
+  font-size: 40px;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0;
+  filter: drop-shadow(0 0 15px rgba(255, 77, 109, 0.3));
+}
+
+@keyframes heartbeat {
+  0% { transform: rotate(45deg) scale(1); }
+  25% { transform: rotate(45deg) scale(1.1); }
+  50% { transform: rotate(45deg) scale(1); }
+  75% { transform: rotate(45deg) scale(1.1); }
+  100% { transform: rotate(45deg) scale(1); }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100px) translateX(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes titleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Position floating hearts with more natural movement */
+.floating-heart:nth-child(1) { left: 5%; animation-duration: 7s; }
+.floating-heart:nth-child(2) { left: 25%; animation-duration: 8s; }
+.floating-heart:nth-child(3) { left: 50%; animation-duration: 6s; }
+.floating-heart:nth-child(4) { left: 75%; animation-duration: 9s; }
+.floating-heart:nth-child(5) { left: 95%; animation-duration: 7.5s; }
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .title {
+    font-size: 3.5rem;
+  }
+  
+  .message {
+    font-size: 1.5rem;
+  }
+  
+  .special-message p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .message-box {
+    padding: 30px;
+  }
+  
+  .message {
+    font-size: 1.2rem;
+  }
+  
+  .cute-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    min-width: 250px;
+  }
+  
+  .special-message p {
+    font-size: 1.1rem;
+  }
+  
+  .heart-container {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .message {
+    font-size: 1.1rem;
+  }
+  
+  .cute-button {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    min-width: 200px;
+  }
+  
+  .special-message p {
+    font-size: 1rem;
+  }
+  
+  .heart-container {
+    width: 100px;
+    height: 100px;
+  }
+}
