@@ -30,7 +30,7 @@ function App() {
 
         {showMessage && (
           <div className="special-message">
-            <p>Sindhu, are you a magician? Because whenever I look at you, everyone else disappears ✨</p>
+            <p>Are you a magician? Because whenever I look at you, everyone else disappears ✨</p>
           </div>
         )}
       </div>
