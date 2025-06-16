@@ -10,10 +10,12 @@ function App() {
         <div className="heart"></div>
       </div>
       
-      <h1 className="title">Hey, I'm Sorry 💝</h1>
+      <h1 className="title">Hey Sindhu, I'm Sorry 💝</h1>
       
       <div className="message-box">
         <p className="message">
+          Dear Sindhu,
+          <br />
           I know I might have made things a bit awkward,
           <br />
           but I really enjoy spending time with you.
@@ -28,7 +30,7 @@ function App() {
 
         {showMessage && (
           <div className="special-message">
-            <p>Are you a magician? Because whenever I look at you, everyone else disappears ✨</p>
+            <p>Sindhu, are you a magician? Because whenever I look at you, everyone else disappears ✨</p>
           </div>
         )}
       </div>
